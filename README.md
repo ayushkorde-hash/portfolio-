@@ -1,106 +1,37 @@
-# Ayush Korde — Developer Portfolio
+# Ayush Korde — Digital Portfolio
 
-A modern, responsive developer portfolio built with **Next.js 14**, **Tailwind CSS**, **Framer Motion**, and **TypeScript**.
+A responsive Next.js portfolio with a cinematic entry portal, an interactive Three.js scene, a SaaS-style project explorer, and a print-ready resume page.
 
-## ✨ Features
+## Routes
 
-- 🎨 Dark mode by default with glassmorphism cards
-- ⚡ Animated particle canvas hero section
-- 🎭 Framer Motion scroll animations throughout
-- 📱 Fully responsive (mobile-first)
-- 🔍 SEO optimized with OpenGraph metadata
-- 🚀 Zero-config deploy on Vercel / Netlify
-- 🎯 Static export support (GitHub Pages ready)
+- `/` — entry portal with opt-in sound and an interactive 3D identity scene.
+- `/home` — portfolio overview, workbench, experience, community, recognition, technology, and contact.
+- `/resume` — print or save the resume as PDF.
 
-## 📁 Structure
+## Stack
 
-```
-portfolio/
-├── app/
-│   ├── globals.css       # Custom styles, CSS variables, animations
-│   ├── layout.tsx        # Root layout with metadata & fonts
-│   └── page.tsx          # Main page assembling all sections
-├── components/
-│   ├── sections/
-│   │   ├── Hero.tsx          # Particle canvas + animated headline
-│   │   ├── About.tsx         # Bio, stats, trait cards
-│   │   ├── Skills.tsx        # Categorized skills with progress bars
-│   │   ├── Projects.tsx      # Glassmorphism project cards
-│   │   ├── Achievements.tsx  # Timeline layout
-│   │   └── Contact.tsx       # Form + contact info
-│   └── ui/
-│       ├── Navbar.tsx        # Fixed responsive navbar
-│       └── Footer.tsx        # Footer with socials
-├── lib/
-│   └── animations.ts     # Reusable Framer Motion variants
-├── public/               # Add favicon.ico, og-image.png, resume.pdf here
-├── tailwind.config.ts
-├── next.config.ts        # Static export enabled
-└── package.json
-```
+- Next.js 14 App Router and React 18
+- TypeScript and Tailwind CSS
+- Three.js, React Three Fiber, and Drei
+- Framer Motion and Lucide icons
 
-## 🚀 Quick Start
+## Local development
 
 ```bash
-# 1. Install dependencies
-npm install
-
-# 2. Run development server
-npm run dev
-# Open http://localhost:3000
-
-# 3. Build for production
-npm run build
+pnpm install
+pnpm dev
 ```
 
-## 🌐 Deploy on Vercel (Recommended)
-
-1. Push this folder to a GitHub repo
-2. Go to [vercel.com](https://vercel.com) → **New Project**
-3. Import your repo
-4. Click **Deploy** — it just works!
-
-## 🌐 Deploy on GitHub Pages
+Open `http://localhost:3000`. For a production static export, run:
 
 ```bash
-# Build static export
-npm run build
-# Output goes to /out folder
-
-# Push /out contents to gh-pages branch
-# Or use GitHub Actions workflow
+pnpm build
 ```
 
-## 📝 Customization Checklist
+The generated site is written to `out/` and can be deployed to Vercel.
 
-- [ ] Update email in `Contact.tsx` and `Footer.tsx`
-- [ ] Update GitHub/LinkedIn URLs in `Hero.tsx`, `Footer.tsx`, `Contact.tsx`
-- [ ] Add your real photo — replace the `AK` initials in `About.tsx`
-- [ ] Add `public/resume.pdf` — your actual resume
-- [ ] Add `public/favicon.ico` — your favicon
-- [ ] Add `public/og-image.png` (1200×630px) — OpenGraph preview image
-- [ ] Update project GitHub links in `Projects.tsx`
-- [ ] Adjust skill percentages in `Skills.tsx`
-- [ ] Update email in `layout.tsx` metadata
+## Portfolio content
 
-## 🎨 Color Palette
+Edit `lib/portfolio.ts` to update profile details, professional links, projects, experience, community roles, recognition, and technologies. The 3D entry scene and the main portfolio scene are in `components/portal/` and `components/hero/` respectively. Local visual assets live in `public/images/`.
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `void` | `#080d1a` | Background |
-| `indigo-600` | `#6366f1` | Primary accent |
-| `violet-600` | `#8b5cf6` | Secondary |
-| `cyan-400` | `#22d3ee` | Highlight |
-
-## 🛠 Tech Stack
-
-- **Next.js 14** — App Router, static export
-- **TypeScript** — Type safety
-- **Tailwind CSS** — Utility-first styling
-- **Framer Motion** — Scroll + hover animations
-- **Lucide React** — Icon library
-- **DM Mono + Outfit** — Typography
-
----
-
-Built by Ayush Korde · PVG College of Engineering, Pune
+The entry sound is opt-in and stored as a local preference. No server API keys or contact-form backend are required.
