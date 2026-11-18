@@ -1,3 +1,8 @@
-/** @type {import('next').NextConfig} */ 
-const nextConfig = { output: 'export', trailingSlash: true, images: { unoptimized: true } }; 
-module.exports = nextConfig; 
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  distDir: process.env.NEXT_DIST_DIR || '.next',
+  images: { unoptimized: true },
+};
+module.exports = nextConfig;

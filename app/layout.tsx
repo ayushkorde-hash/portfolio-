@@ -2,45 +2,36 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ayush Korde — IT Student & Developer",
+  title: "Ayush Korde — Software Engineer · Full-Stack & AI",
   description:
-    "Portfolio of Ayush Korde — Information Technology student at PVG College of Engineering. Building web experiences, participating in hackathons, and exploring full-stack development.",
+    "Enter Ayush Korde’s digital portfolio to explore software engineering, full-stack product work, AI experiments and community leadership.",
   keywords: [
     "Ayush Korde",
     "developer portfolio",
     "IT student",
     "PVG College",
-    "hackathon",
-    "web developer",
-    "frontend",
+    "full-stack developer",
+    "AI engineer",
+    "software engineer",
     "React",
-    "Next.js",
+    "TypeScript",
   ],
   authors: [{ name: "Ayush Korde" }],
   creator: "Ayush Korde",
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://ayushkorde.vercel.app",
-    title: "Ayush Korde — IT Student & Developer",
+    url: "https://portfolio-eight-nu-k6z9i11jaj.vercel.app/",
+    title: "Ayush Korde — Software Engineer · Full-Stack & AI",
     description:
-      "Portfolio of Ayush Korde — Information Technology student at PVG College of Engineering.",
+      "Full-stack software and applied AI work by Ayush Korde.",
     siteName: "Ayush Korde Portfolio",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Ayush Korde — Developer Portfolio",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ayush Korde — IT Student & Developer",
+    title: "Ayush Korde — Software Engineer · Full-Stack & AI",
     description:
-      "Portfolio of Ayush Korde — Information Technology student at PVG College of Engineering.",
-    images: ["/og-image.png"],
+      "Enter Ayush Korde’s digital portfolio to explore software engineering, full-stack product work and AI experiments.",
   },
   robots: {
     index: true,
@@ -61,20 +52,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth" data-theme="dark" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="theme-color" content="#080d1a" />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('ayush-portfolio-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}})()` }} />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <meta name="theme-color" content="#0a0b0d" />
       </head>
       <body className="font-body antialiased">{children}</body>
     </html>
